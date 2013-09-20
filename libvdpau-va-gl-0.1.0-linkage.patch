@@ -1,0 +1,11 @@
+diff -urN libvdpau-va-gl-0.1.0/CMakeLists.txt libvdpau-va-gl-0.1.0-patched/CMakeLists.txt
+--- libvdpau-va-gl-0.1.0/CMakeLists.txt	2013-07-06 23:38:22.000000000 +1100
++++ libvdpau-va-gl-0.1.0-patched/CMakeLists.txt	2013-09-20 16:32:41.157872411 +1100
+@@ -37,6 +37,7 @@
+ 
+ target_link_libraries (vdpau_va_gl
+ 	${SOMELIBS_LIBRARIES}
++	-lX11 -lrt
+ )
+ 
+ target_link_libraries (xinitthreads -lpthread -lX11)
