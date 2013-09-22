@@ -1,10 +1,16 @@
+# .so is not a devel file here
+%if %{_use_internal_dependency_generator}
+%define __noautoprov 'devel\\(.*'
+%define __noautoreq 'devel\\(.*'
+%endif
+
 %define major 1
 %define libname %mklibname vdpau_va_gl %{major}
 
 Summary:	VDPAU driver with OpenGL/VAAPI backend
 Name:		libvdpau-va-gl
 Version:	0.1.0
-Release:	1
+Release:	2
 License:	GPLv3+
 Group:		System/Libraries
 Url:		https://github.com/i-rinat/libvdpau-va-gl
@@ -49,6 +55,7 @@ decoding.
 %files -n %{libname}
 %doc COPYING ChangeLog README.md
 %{_libdir}/libvdpau_va_gl.so.%{major}*
+%{_libdir}/libvdpau_va_gl.so
 
 #----------------------------------------------------------------------------
 
@@ -62,6 +69,4 @@ decoding.
 
 %install
 %makeinstall_std -C build
-
-rm -f %{buildroot}%{_libdir}/libvdpau_va_gl.so
 
