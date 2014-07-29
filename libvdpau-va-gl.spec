@@ -15,6 +15,7 @@ License:	GPLv3+
 Group:		System/Libraries
 Url:		https://github.com/i-rinat/libvdpau-va-gl
 Source0:	https://github.com/i-rinat/libvdpau-va-gl/archive/%{name}-%{version}.tar.gz
+Source1:	libvdpau-va-gl.rpmlintrc
 Patch0:		libvdpau-va-gl-0.1.0-linkage.patch
 BuildRequires:	cmake
 BuildRequires:	pkgconfig(gl)
@@ -69,4 +70,3 @@ decoding.
 
 %install
 %makeinstall_std -C build
-
