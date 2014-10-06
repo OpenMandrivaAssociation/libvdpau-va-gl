@@ -1,2 +1,4 @@
+removed_sources:
+  libvdpau-va-gl-0.1.0.tar.gz: dc9f548f919bf5c1963aaeaacb9fc9c3c3dda3e6
 sources:
-  "libvdpau-va-gl-0.1.0.tar.gz": dc9f548f919bf5c1963aaeaacb9fc9c3c3dda3e6
+  libvdpau-va-gl-0.3.4.tar.gz: 8cc8c3cc3f1ea02bdfabd627a3b3d943ef60519c

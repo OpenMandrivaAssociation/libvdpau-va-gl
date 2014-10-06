@@ -9,14 +9,13 @@
 
 Summary:	VDPAU driver with OpenGL/VAAPI backend
 Name:		libvdpau-va-gl
-Version:	0.1.0
-Release:	8
+Version:	0.3.4
+Release:	1
 License:	GPLv3+
 Group:		System/Libraries
 Url:		https://github.com/i-rinat/libvdpau-va-gl
 Source0:	https://github.com/i-rinat/libvdpau-va-gl/archive/%{name}-%{version}.tar.gz
 Source1:	libvdpau-va-gl.rpmlintrc
-Patch0:		libvdpau-va-gl-0.1.0-linkage.patch
 BuildRequires:	cmake
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glib-2.0)
@@ -62,7 +61,7 @@ decoding.
 
 %prep
 %setup -q
-%patch0 -p1
+%apply_patches
 
 %build
 %cmake
