@@ -9,12 +9,12 @@
 
 Summary:	VDPAU driver with OpenGL/VAAPI backend
 Name:		libvdpau-va-gl
-Version:	0.3.4
-Release:	5
+Version:	0.4.2
+Release:	1
 License:	GPLv3+
 Group:		System/Libraries
 Url:		https://github.com/i-rinat/libvdpau-va-gl
-Source0:	https://github.com/i-rinat/libvdpau-va-gl/archive/%{name}-%{version}.tar.gz
+Source0:	https://github.com/i-rinat/libvdpau-va-gl/archive/v%{version}.tar.gz
 Source1:	libvdpau-va-gl.rpmlintrc
 BuildRequires:	cmake
 BuildRequires:	pkgconfig(gl)
@@ -53,7 +53,7 @@ to accelerate drawing and scaling and VA-API (if available) to accelerate video
 decoding.
 
 %files -n %{libname}
-%doc COPYING ChangeLog README.md
+%doc ChangeLog README.md
 %{_libdir}/libvdpau_va_gl.so.%{major}*
 %{_libdir}/libvdpau_va_gl.so
 %{_libdir}/libvdpau_i965.so
