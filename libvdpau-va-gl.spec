@@ -10,7 +10,7 @@
 Summary:	VDPAU driver with OpenGL/VAAPI backend
 Name:		libvdpau-va-gl
 Version:	0.4.2
-Release:	1
+Release:	2
 License:	GPLv3+
 Group:		System/Libraries
 Url:		https://github.com/i-rinat/libvdpau-va-gl
@@ -66,10 +66,10 @@ decoding.
 
 %build
 %cmake
-%make
+%make_build
 
 %install
-%makeinstall_std -C build
+%make_install -C build
 # Add a symlink for libvdpau_i965.so: vdpau users look for it when
 # using the Intel graphics drivers, but there is no Intel specific
 # libvdpau implementation right now. So let's use one that works.
