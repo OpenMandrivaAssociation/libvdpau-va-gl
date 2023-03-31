@@ -10,7 +10,7 @@
 Summary:	VDPAU driver with OpenGL/VAAPI backend
 Name:		libvdpau-va-gl
 Version:	0.4.2
-Release:	2
+Release:	3
 License:	GPLv3+
 Group:		System/Libraries
 Url:		https://github.com/i-rinat/libvdpau-va-gl
